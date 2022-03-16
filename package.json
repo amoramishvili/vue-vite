@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "axios": "^0.26.1",
+    "pinia": "^2.0.12",
     "pm2": "^5.2.0",
     "vee-validate": "^4.5.10",
     "vue": "^3.2.25",

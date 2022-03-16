@@ -1,15 +1,20 @@
 <template>
   <div>
     <router-link to="about">about</router-link>
-    home
+    home {{ id }}
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useTest } from "../store/test";
+
 export default defineComponent({
   setup() {
-    return {};
+    const { id } = useTest();
+    return {
+      id,
+    };
   },
 });
 </script>
