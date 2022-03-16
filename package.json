@@ -1,0 +1,29 @@
+{
+  "name": "vite-project",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "serve": "node server.ts"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "vee-validate": "^4.5.10",
+    "vue": "^3.2.25",
+    "vue-router": "4",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "@vitejs/plugin-legacy": "^1.7.1",
+    "@vitejs/plugin-vue": "^2.2.0",
+    "express": "^4.17.3",
+    "rollup-plugin-visualizer": "^5.6.0",
+    "sass": "^1.49.9",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vue-tsc": "^0.29.8"
+  }
+}
