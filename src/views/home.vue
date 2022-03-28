@@ -1,19 +1,36 @@
 <template>
   <div>
     <router-link to="about">about</router-link>
-    home {{ id }}
+    home
+    <div>Message From: {{ appStore.dataFrom }}</div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import { useTest } from "../store/test";
+import { defineComponent, onServerPrefetch } from "vue";
+import { useHead } from "@vueuse/head";
+import { useAppStore } from "../store/appStore";
 
 export default defineComponent({
   setup() {
-    const { id } = useTest();
+    const appStore = useAppStore();
+
+    onServerPrefetch(() => {
+      appStore.dataFrom = "server";
+    });
+
+    useHead({
+      title: "Home Page",
+      meta: [
+        {
+          name: "description",
+          content: "Home Page Description",
+        },
+      ],
+    });
+
     return {
-      id,
+      appStore,
     };
   },
 });

@@ -4,6 +4,8 @@ import vue from "@vitejs/plugin-vue";
 import legacy from "@vitejs/plugin-legacy";
 import { visualizer } from "rollup-plugin-visualizer";
 
+require("dotenv").config();
+
 export default ({ command }) => {
   const config: UserConfig = {
     plugins: [
@@ -15,9 +17,13 @@ export default ({ command }) => {
     ],
     resolve: {
       alias: {
+        vue: "vue/dist/vue.esm-bundler.js",
         "@": path.resolve(__dirname, "src"),
         "~": path.resolve(__dirname, "assets"),
       },
+    },
+    define: {
+      "process.env": process.env,
     },
   };
 
@@ -33,19 +39,3 @@ export default ({ command }) => {
 
   return config;
 };
-
-// export default defineConfig({
-//   plugins: [
-//     vue(),
-//     legacy({
-//       targets: ["ie >= 11"],
-//       additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
-//     }),
-//   ],
-//   resolve: {
-//     alias: {
-//       "@": path.resolve(__dirname, "src"),
-//       "~": path.resolve(__dirname, "assets"),
-//     },
-//   },
-// });

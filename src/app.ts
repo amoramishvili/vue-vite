@@ -1,12 +1,17 @@
-import { createApp } from "vue";
+import { createSSRApp, createApp as createVueApp } from "vue";
 import router from "./router";
-import { createPinia } from "pinia";
+import store from "./store";
+import { createHead } from "@vueuse/head";
 import App from "./layouts/App.vue";
 
-export async function createMyApp() {
-  const app = createApp(App);
-  const store = createPinia();
+export function createMyApp() {
+  const isSSR = typeof window === "undefined";
+  const app = isSSR ? createSSRApp(App) : createVueApp(App);
+  const head = createHead();
+
   app.use(store);
   app.use(router);
-  return app;
+  app.use(head);
+
+  return { app, router, head, store };
 }
