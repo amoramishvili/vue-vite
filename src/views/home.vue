@@ -2,7 +2,7 @@
   <div>
     <router-link to="about">about</router-link>
     home
-    <div>Message From: {{ info }}</div>
+    <div>Message From: {{ setInfo }}</div>
   </div>
 </template>
 
@@ -14,8 +14,6 @@ import { useAppStore } from "../store/appStore";
 export default defineComponent({
   setup() {
     const { getInfo, setInfo } = useAppStore();
-
-    const info = computed(() => setInfo);
 
     onServerPrefetch(async () => {
       await getInfo();
@@ -32,7 +30,7 @@ export default defineComponent({
     });
 
     return {
-      info,
+      setInfo,
     };
   },
 });

@@ -2,6 +2,8 @@
   <div>
     <router-link :to="{ name: 'home' }">home</router-link>
     about
+
+    <v-icon name="dislike" />
   </div>
 </template>
 

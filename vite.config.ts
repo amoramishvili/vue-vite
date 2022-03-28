@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import legacy from "@vitejs/plugin-legacy";
 import { visualizer } from "rollup-plugin-visualizer";
+import svgLoader from "vite-svg-loader";
 
 require("dotenv").config();
 
@@ -14,6 +15,7 @@ export default ({ command }) => {
         targets: ["ie >= 11"],
         additionalLegacyPolyfills: ["regenerator-runtime/runtime"],
       }),
+      svgLoader(),
     ],
     resolve: {
       alias: {
