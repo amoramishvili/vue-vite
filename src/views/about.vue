@@ -4,14 +4,38 @@
     about
 
     <v-icon name="dislike" />
+
+    <div>Message From: {{ state.todos }}</div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import {
+  defineComponent,
+  onBeforeMount,
+  onServerPrefetch,
+  onUnmounted,
+} from "vue";
+import { useApp } from "../hooks/app";
+import { state } from "../hooks/state";
 export default defineComponent({
   setup() {
-    return {};
+    const { getTodos } = useApp();
+    onServerPrefetch(async () => {
+      await getTodos();
+    });
+    onUnmounted(() => {
+      state.todos = null;
+    });
+    onBeforeMount(async () => {
+      if (!state.todos) {
+        await getTodos();
+      }
+    });
+
+    return {
+      state,
+    };
   },
 });
 </script>

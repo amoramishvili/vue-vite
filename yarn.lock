@@ -284,7 +284,7 @@
     "@vue/compiler-dom" "3.2.31"
     "@vue/shared" "3.2.31"
 
-"@vue/devtools-api@^6.0.0", "@vue/devtools-api@^6.0.0-beta.11", "@vue/devtools-api@^6.0.0-beta.15", "@vue/devtools-api@^6.1.0":
+"@vue/devtools-api@^6.0.0", "@vue/devtools-api@^6.0.0-beta.15":
   version "6.1.3"
   resolved "https://registry.yarnpkg.com/@vue/devtools-api/-/devtools-api-6.1.3.tgz#a44c52e8fa6d22f84db3abdcdd0be5135b7dd7cf"
   integrity sha512-79InfO2xHv+WHIrH1bHXQUiQD/wMls9qBk6WVwGCbdwP7/3zINtvqPNMtmSHXsIKjvUAHc8L0ouOj6ZQQRmcXg==
@@ -2108,14 +2108,6 @@ pidusage@~3.0:
   dependencies:
     safe-buffer "^5.2.1"
 
-pinia@^2.0.12:
-  version "2.0.12"
-  resolved "https://registry.yarnpkg.com/pinia/-/pinia-2.0.12.tgz#4c6f7f59cb41f56f20deee71c403e66d8d3c637d"
-  integrity sha512-tUeuYGFrLU5irmGyRAIxp35q1OTcZ8sKpGT4XkPeVcG35W4R6cfXDbCGexzmVqH5lTQJJTXXbNGutIu9yS5yew==
-  dependencies:
-    "@vue/devtools-api" "^6.1.0"
-    vue-demi "*"
-
 pm2-axon-rpc@~0.7.0, pm2-axon-rpc@~0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/pm2-axon-rpc/-/pm2-axon-rpc-0.7.1.tgz#2daec5383a63135b3f18babb70266dacdcbc429a"
@@ -3103,11 +3095,6 @@ vscode-vue-languageservice@0.29.8:
     vscode-pug-languageservice "0.29.8"
     vscode-typescript-languageservice "0.29.8"
 
-vue-demi@*:
-  version "0.12.4"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.12.4.tgz#420dd17628f95f1bbce1102ad3c51074713a8049"
-  integrity sha512-ztPDkFt0TSUdoq1ZI6oD730vgztBkiByhUW7L1cOTebiSBqSYfSQgnhYakYigBkyAybqCTH7h44yZuDJf2xILQ==
-
 vue-router@4:
   version "4.0.14"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-4.0.14.tgz#ce2028c1c5c33e30c7287950c973f397fce1bd65"
@@ -3133,18 +3120,6 @@ vue@^3.2.25:
     "@vue/runtime-dom" "3.2.31"
     "@vue/server-renderer" "3.2.31"
     "@vue/shared" "3.2.31"
-
-vuex-router-sync@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/vuex-router-sync/-/vuex-router-sync-5.0.0.tgz#1a225c17a1dd9e2f74af0a1b2c62072e9492b305"
-  integrity sha512-Mry2sO4kiAG64714X1CFpTA/shUH1DmkZ26DFDtwoM/yyx6OtMrc+MxrU+7vvbNLO9LSpgwkiJ8W+rlmRtsM+w==
-
-vuex@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/vuex/-/vuex-4.0.2.tgz#f896dbd5bf2a0e963f00c67e9b610de749ccacc9"
-  integrity sha512-M6r8uxELjZIK8kTKDGgZTYX/ahzblnzC4isU1tpmEuOIIKmV+TRdc+H4s8ds2NuZ7wpUTdGRzJRtoj+lI+pc0Q==
-  dependencies:
-    "@vue/devtools-api" "^6.0.0-beta.11"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

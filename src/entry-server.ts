@@ -1,10 +1,10 @@
 import { createMyApp } from "./app";
 import { renderToString } from "@vue/server-renderer";
 import { renderHeadToString } from "@vueuse/head";
-import { sync } from "vuex-router-sync";
+import { state } from "./hooks/state";
 
 export async function render(url, manifest) {
-  const { app, router, head, store } = createMyApp();
+  const { app, router, head } = createMyApp();
 
   await router.push(url);
   await router.isReady();
@@ -14,7 +14,8 @@ export async function render(url, manifest) {
   const { headTags } = renderHeadToString(head);
 
   const preloadLinks = renderPreloadLinks(ctx.modules, manifest);
-  return [html, preloadLinks, headTags, store];
+
+  return [html, preloadLinks, headTags, state];
 }
 
 function renderPreloadLinks(modules, manifest) {

@@ -2,21 +2,35 @@
   <div>
     <router-link to="about">about</router-link>
     home
-    <div>Message From: {{ setInfo }}</div>
+    <div>Message From: {{ state.info }}</div>
   </div>
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, onServerPrefetch } from "vue";
+import {
+  watch,
+  defineComponent,
+  onServerPrefetch,
+  onUnmounted,
+  onBeforeMount,
+} from "vue";
 import { useHead } from "@vueuse/head";
-import { useAppStore } from "../store/appStore";
+import { useApp } from "../hooks/app";
+import { state } from "../hooks/state";
 
 export default defineComponent({
   setup() {
-    const { getInfo, setInfo } = useAppStore();
-
+    const { getApp } = useApp();
     onServerPrefetch(async () => {
-      await getInfo();
+      await getApp();
+    });
+    onUnmounted(() => {
+      state.info = null;
+    });
+    onBeforeMount(async () => {
+      if (!state.info) {
+        await getApp();
+      }
     });
 
     useHead({
@@ -30,7 +44,7 @@ export default defineComponent({
     });
 
     return {
-      setInfo,
+      state,
     };
   },
 });

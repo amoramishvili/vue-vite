@@ -12,8 +12,6 @@
 - [Legacy Browsers Support](https://www.npmjs.com/package/@vitejs/plugin-legacy)
 - [Server Side Rendering]()
 
-
-
 ### Getting Started
 
 ```bash
@@ -26,18 +24,18 @@ yarn
 yarn run dev
 ```
 
-
-
 ### Tools added:
-* axios interceptor
-* custom svg loader (`v-icon`)
-* pre-defined validation rules (`required|email`)
 
-
+- axios interceptor
+- custom svg loader (`v-icon`)
+- pre-defined validation rules (`required|email`)
 
 ### global components
-* `v-icon`
+
+- `v-icon`
+
 #### usage
+
 ```typescript
 // src/utils/vIcon.ts
 
@@ -55,12 +53,11 @@ components: {
 <v-icon name="dislike" />
 ```
 
-
 ## Browser support
 
-vite uses __native ES modules__, `92.8%` of modern browsers(April 2022) support `<script type="module">`. We have added a vite's official plugin([Check it out](https://www.npmjs.com/package/@vitejs/plugin-legacy)) to support legacy browsers as well, this means that, if your clients are visiting from older browsers, the site will still work __(even in IE)__
-
+vite uses **native ES modules**, `92.8%` of modern browsers(April 2022) support `<script type="module">`. We have added a vite's official plugin([Check it out](https://www.npmjs.com/package/@vitejs/plugin-legacy)) to support legacy browsers as well, this means that, if your clients are visiting from older browsers, the site will still work **(even in IE)**
 
 ## Creators / Maintainers
-* [@amoramishvili](https://github.com/amoramishvili)
-* [@chkhaidzebeka](https://github.com/chkhaidzebeka)
+
+- [@amoramishvili](https://github.com/amoramishvili)
+- [@chkhaidzebeka](https://github.com/chkhaidzebeka)

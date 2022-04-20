@@ -21,14 +21,11 @@
     "@vueuse/head": "^0.7.5",
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
-    "pinia": "^2.0.12",
     "pm2": "^5.2.0",
     "serialize-javascript": "^6.0.0",
     "vee-validate": "^4.5.10",
     "vue": "^3.2.25",
     "vue-router": "4",
-    "vuex": "^4.0.2",
-    "vuex-router-sync": "^5.0.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {

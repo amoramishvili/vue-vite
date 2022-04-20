@@ -56,7 +56,7 @@ async function createServer(
         render = require("./dist/server/entry-server.js").render;
       }
 
-      const [appHtml, preloadLinks, headTags, store] = await render(
+      const [appHtml, preloadLinks, headTags, state] = await render(
         url,
         manifest
       );
@@ -65,7 +65,7 @@ async function createServer(
         .replace(`<!--preload-links-->`, preloadLinks)
         .replace(`<!--app-html-->`, appHtml)
         .replace(`<!--head-tags-->`, headTags)
-        .replace(`"<vuex-state>"`, serialize(store.state.value));
+        .replace(`"<vuex-state>"`, serialize(state));
 
       res.status(200).set({ "Content-Type": "text/html" }).end(html);
     } catch (e) {
