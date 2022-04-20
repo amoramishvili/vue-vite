@@ -1,4 +1,4 @@
-# 🔥 Vue 3 + Vue Router + Pinia + Vite + Typescript + SSR ✔
+# 🔥 Vue 3 + Vue Router + Vite + Typescript + SSR ✔
 
 ![Vite, Vue, Tailwind CSS](http://svgur.com/i/fs4.svg)
 
@@ -6,7 +6,6 @@
 
 - [Vue 3](https://vuejs.org/guide/introduction.html)
 - [Vue Router v4](https://github.com/vuejs/router)
-- [Pinia Store](https://pinia.vuejs.org/introduction.html)
 - [Vite](https://vitejs.dev/guide/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Legacy Browsers Support](https://www.npmjs.com/package/@vitejs/plugin-legacy)
