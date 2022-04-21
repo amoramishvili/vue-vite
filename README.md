@@ -1,6 +1,6 @@
 # 🔥 Vue 3 + Vue Router + Vite + Typescript + SSR ✔
 
-![Vite, Vue, Tailwind CSS](http://svgur.com/i/fs4.svg)
+![Vite, Vue, Tailwind CSS](http://svgur.com/i/gUd.svg)
 
 ## This starter template includes:
 
